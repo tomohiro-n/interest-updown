@@ -1,0 +1,12 @@
+<div ng-include="'app/main/header.html'"></div>
+<div>
+	<section id="my-interest-section" class="container">
+		<div class="row">
+			<div ng-repeat="interest in interests">
+				<div class="btn btn-primary" data-drag="true" jqyoui-draggable="{animate:true}" data-jqyoui-options="{revert: 'invalid'}">
+					{{ $index + 1 }} : {{interest.name}}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

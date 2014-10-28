@@ -19,7 +19,7 @@ class MainCtrl {
 		};
 
 		$scope.sortableOptions = {
-			stop : (e, ui) => {
+			stop(e, ui) {
 				console.log($scope.user.interests.map((entry) => {
 					return entry.name;
 				}));

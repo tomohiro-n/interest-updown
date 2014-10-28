@@ -9,6 +9,10 @@ class InterestEntry {
 		this.updated = moment();
 	}
 
-	registered : Moment
-	updated : Moment
+	registered : Moment;
+	updated : Moment;
+
+	getRegistered() : string {
+		return moment(this.registered).fromNow();
+	}
 }

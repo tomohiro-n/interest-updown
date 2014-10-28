@@ -2,11 +2,13 @@
 <div>
 	<section id="my-interest-section" class="container">
 		<div class="row">
-			<div ng-repeat="interest in user.interests">
-				<div class="btn btn-primary" data-drag="true" jqyoui-draggable="{animate:true}" data-jqyoui-options="{revert: 'invalid'}">
-					{{ $index + 1 }} : {{interest.name}}
-				</div>
-			</div>
+			<ul ui-sortable="sortableOptions" class="list-unstyled" ng-model="user.interests">
+				<li ng-repeat="interest in user.interests">
+					<div class="btn btn-primary">
+						{{ $index + 1 }} : {{interest.name}}
+					</div>
+				</li>
+			</ul>
 		</div>
 	</section>
 </div>

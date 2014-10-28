@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('interestUpdown', ['ngResource', 'ngRoute', 'ngDragDrop'])
+angular.module('interestUpdown', ['ngResource', 'ngRoute', 'ui.sortable'])
 	.config(function ($routeProvider) {
 		$routeProvider
 			.when('/', {

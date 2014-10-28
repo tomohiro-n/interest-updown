@@ -11,7 +11,8 @@ angular.module('interestUpdown', ['ngResource', 'ngRoute', 'ngDragDrop'])
 				redirectTo: '/'
 			});
 	})
+	.service('UserService', UserService)
 	.controller('MainCtrl', [
-		'$scope', MainCtrl
+		'$scope', 'UserService', MainCtrl
 	])
 ;

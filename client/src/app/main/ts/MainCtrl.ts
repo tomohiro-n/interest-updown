@@ -1,21 +1,17 @@
 /// <reference path="def/angular/angular.d.ts" />
 /// <reference path="InterestEntry.ts" />
+/// <reference path="UserService.ts" />
 
 class MainCtrl {
 	constructor (
-		private $scope
+		private $scope,
+		private userService : UserService
 		) {
 
-		$scope.interests = [
-			new InterestEntry("sample", []),
-			new InterestEntry("sample2", []),
-			new InterestEntry("sample3", [])
-		];
+		$scope.user = userService.getUser();
 
 		$scope.addEntry = (name : string) => {
-			var entry : InterestEntry;
-			entry = new InterestEntry(name, []);
-			$scope.interests.push(entry);
+			userService.addInterest($scope.user, name);
 		};
 	}
 }

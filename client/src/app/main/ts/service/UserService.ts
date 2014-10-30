@@ -1,8 +1,8 @@
-/// <reference path="UserEntry.ts" />
-/// <reference path="TmpInitialData.ts" />
-/// <reference path="InterestEntry.ts" />
-/// <reference path="TImeFeedEntry.ts" />
-/// <reference path="def/moment/moment.d.ts" />
+/// <reference path="../model/UserEntry.ts" />
+/// <reference path="../TmpInitialData.ts" />
+/// <reference path="../model/InterestEntry.ts" />
+/// <reference path="../model/TimeFeedEntry.ts" />
+/// <reference path="../def/moment/moment.d.ts" />
 
 class UserService {
 

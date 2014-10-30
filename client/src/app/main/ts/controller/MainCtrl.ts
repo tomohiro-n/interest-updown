@@ -1,8 +1,8 @@
-/// <reference path="def/angular/angular.d.ts" />
-/// <reference path="def/jquery/jquery.d.ts" />
-/// <reference path="def/jqueryui/jqueryui.d.ts" />
-/// <reference path="InterestEntry.ts" />
-/// <reference path="UserService.ts" />
+/// <reference path="../def/angular/angular.d.ts" />
+/// <reference path="../def/jquery/jquery.d.ts" />
+/// <reference path="../def/jqueryui/jqueryui.d.ts" />
+/// <reference path="../model/InterestEntry.ts" />
+/// <reference path="../service/UserService.ts" />
 
 class MainCtrl {
 	constructor (

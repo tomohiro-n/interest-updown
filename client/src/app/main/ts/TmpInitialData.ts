@@ -1,5 +1,5 @@
-/// <reference path="UserEntry.ts" />
-/// <reference path="InterestEntry.ts" />
+/// <reference path="model/UserEntry.ts" />
+/// <reference path="model/InterestEntry.ts" />
 
 class TmpInitialData {
 	static firstUser : UserEntry = new UserEntry("me",

@@ -1,4 +1,4 @@
-/// <reference path="def/moment/moment.d.ts" />
+/// <reference path="../def/moment/moment.d.ts" />
 
 class InterestRankUpdateEntry {
 	constructor(

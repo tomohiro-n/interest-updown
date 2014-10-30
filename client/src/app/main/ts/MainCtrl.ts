@@ -7,6 +7,7 @@
 class MainCtrl {
 	constructor (
 		private $scope,
+		private $timeout: ng.ITimeoutService,
 		private userService : UserService
 		) {
 
@@ -18,13 +19,23 @@ class MainCtrl {
 			userService.addInterest($scope.user, name);
 		};
 
+		$scope.getUserUpdates = () => {
+			return userService.getFriendsUpdates($scope.user);
+		}
+
 		$scope.sortableOptions = {
+
+			start(e, ui) {
+				$scope.draggedIndex = ui.item.index();
+			},
+
 			stop(e, ui) {
-				console.log($scope.user.interests.map((entry) => {
-					return entry.name;
-				}));
-				// TODO we should call a service for API call
+				var droppedIndex = ui.item.index();
+				userService.changeInterestRank($scope.user, $scope.draggedIndex, droppedIndex);
 			}
 		}
+
+		$timeout(userService.dummyDataUpdates.bind(userService), 5000);
+
 	}
 }

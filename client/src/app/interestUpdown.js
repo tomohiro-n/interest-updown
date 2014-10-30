@@ -13,6 +13,6 @@ angular.module('interestUpdown', ['ngResource', 'ngRoute', 'ui.sortable'])
 	})
 	.service('UserService', UserService)
 	.controller('MainCtrl', [
-		'$scope', 'UserService', MainCtrl
+		'$scope', '$timeout', 'UserService', MainCtrl
 	])
 ;

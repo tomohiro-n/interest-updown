@@ -2,7 +2,9 @@
 <div>
 	<section id="time-feed" class="container">
 		<h3>Time Feed</h3>
-		WIP
+		<div ng-repeat="update in getUserUpdates()">
+			<div class="btn">{{update}}</div>
+		</div>
 	</section>
 	<hr>
 	<section id="friends-interest-section" class="container">
